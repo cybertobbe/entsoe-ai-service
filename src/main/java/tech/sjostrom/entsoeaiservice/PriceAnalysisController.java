@@ -19,7 +19,7 @@ public class PriceAnalysisController {
 
     @GetMapping
     public ResponseEntity<Map<String, String>> getAnalysis() {
-        String analysis = analysisService.analyze();
+        String analysis = analysisService.analyzePrices();
         return ResponseEntity.ok(Map.of("analysis", analysis));
     }
 }
